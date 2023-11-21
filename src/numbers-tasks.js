@@ -1,3 +1,4 @@
+/* eslint-disable no-param-reassign */
 /* *******************************************************************************************
  *                                                                                           *
  * Please read the following tutorial before implementing tasks:                              *
@@ -328,8 +329,13 @@ function getSumToN(n) {
  *   202 => 4  // (2+0+2)
  *   5   => 5  // 5
  */
-function getSumOfDigits(/* num */) {
-  throw new Error('Not implemented');
+function getSumOfDigits(num) {
+  let result = 0;
+  while (num !== 0) {
+    result += num % 10;
+    num = Math.trunc(num / 10);
+  }
+  return result;
 }
 
 /**
