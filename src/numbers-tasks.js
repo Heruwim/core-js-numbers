@@ -1,3 +1,5 @@
+/* eslint-disable no-plusplus */
+/* eslint-disable no-bitwise */
 /* eslint-disable no-param-reassign */
 /* *******************************************************************************************
  *                                                                                           *
@@ -349,8 +351,18 @@ function getSumOfDigits(num) {
  *   16  => true
  *   15  => false
  */
-function isPowerOfTwo(/* num */) {
-  throw new Error('Not implemented');
+function isPowerOfTwo(num) {
+  if (num === 0) {
+    return false;
+  }
+  let res = 1;
+  for (let i = 0; res <= num; i++) {
+    if (res === num) {
+      return true;
+    }
+    res = 2 ** i;
+  }
+  return false;
 }
 
 /**
