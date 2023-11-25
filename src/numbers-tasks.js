@@ -469,7 +469,7 @@ function getNumberValue(number) {
  * '5'      => false
  */
 function isNumber(number) {
-  return number.isNumber();
+  return Number.isFinite(number);
 }
 
 /**
